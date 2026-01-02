@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shinichi | 3D Experience</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="brand-logo" data-aos="fade-down">Shinichi</a>
+
+        <nav class="nav-links" data-aos="fade-down" data-aos-delay="200">
+            <a href="index.html">Home</a>
+            <a href="#skills" class="skills">Soft Skills</a>
+            <a href="#">Contact</a>
+        </nav>
+        
+        <a href="#skills" class="btn-primary" data-aos="fade-down" data-aos-delay="400">Tentang Diri Saya</a>
+    </header>
+
+    <main class="hero-section">
+        <div class="hero-text-wrapper">
+            <div class="badge" data-aos="fade-up">Latihan Website sederhana dengan 3D</div>
+
+            <h1 class="hero-heading" data-aos="fade-up" data-aos-delay="100">
+                Email for us <br> Developers
+            </h1>
+
+            <p class="hero-subtext" data-aos="fade-up" data-aos-delay="200">
+             Latihan coba bikin 3D dengan bantuan liat tutorial youtube dan 3D model dari Spline.
+            </p>
+
+            <div class="cta-group" data-aos="fade-up" data-aos-delay="300">
+                <a href="https://youtu.be/oskiEydAaok?si=Q5-wG5rryXXS4puF" class="btn-primary">Tutorial Pembuatan 3D</a>
+                <a href="https://app.spline.design/community" class="btn-outline">Model 3D</a>
+            </div>
+        </div>
+
+        <div class="hero-visual" data-aos="zoom-in" data-aos-duration="1500">
+            <spline-viewer 
+                class="model-viewer"
+                url="https://prod.spline.design/6cWmeRIDbo67QA8U/scene.splinecode">
+            </spline-viewer>
+        </div>
+    </main> 
+    <section id="skills" class="skills-section">
+        <h2 class="section-title" data-aos="fade-up">Soft <span class="text-purple">Skills</span></h2>
+        
+        <div class="skills-container">
+           
+            <div class="skill-card" data-aos="flip-left" data-aos-delay="200">
+                <h3>Teamwork</h3>
+                <p>Bisa bekerja sama dalam tim dan berkolaborasi menggunakan Git.</p>
+            </div>
+
+            <div class="skill-card" data-aos="flip-left" data-aos-delay="300">
+                <h3>Problem Solving</h3>
+                <p>Suka mencari solusi logis untuk memecahkan bug atau error kode.</p>
+            </div>
+
+            <div class="skill-card" data-aos="flip-left" data-aos-delay="400">
+                <h3>Adaptability</h3>
+                <p>Cepat belajar teknologi baru dan beradaptasi dengan perubahan.</p>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.27/build/spline-viewer.js"></script>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true });
+    </script>
+
+</body>
+</html>
