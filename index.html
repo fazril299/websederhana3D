@@ -1,77 +1,261 @@
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shinichi | 3D Experience</title>
-    
-    <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shinichi | 3D Experience</title>
+
+<meta name="description" content="Portfolio sederhana dengan elemen 3D">
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- SPLINE VIEWER -->
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.69/build/spline-viewer.js"></script>
+<spline-viewer url="https://prod.spline.design/AUtAmQFcHdOxpjJt/scene.splinecode"></spline-viewer>
 </head>
+
+
 <body>
 
-    <header class="navbar">
-        <a href="#" class="brand-logo" data-aos="fade-down">Shinichi</a>
+<!-- SPLINE BACKGROUND -->
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.69/build/spline-viewer.js"></script>
+<spline-viewer url="https://prod.spline.design/AUtAmQFcHdOxpjJt/scene.splinecode"></spline-viewer>
+<!-- INTRO SCREEN -->
+<div id="intro-screen">
 
-        <nav class="nav-links" data-aos="fade-down" data-aos-delay="200">
-            <a href="index.html">Home</a>
-            <a href="#skills" class="skills">Soft Skills</a>
-            <a href="#">Contact</a>
-        </nav>
-        
-        <a href="#skills" class="btn-primary" data-aos="fade-down" data-aos-delay="400">Tentang Diri Saya</a>
-    </header>
+<h1 class="intro-text">
+Welcome to my Portfolio
+</h1>
 
-    <main class="hero-section">
-        <div class="hero-text-wrapper">
-            <div class="badge" data-aos="fade-up">Latihan Website sederhana dengan 3D</div>
+<button id="start-btn">
+<span>Mulai Jelajahi</span>
+<i class="fa-solid fa-rocket"></i>
+</button>
 
-            <h1 class="hero-heading" data-aos="fade-up" data-aos-delay="100">
-                Email for us <br> zreal
-            </h1>
+</div>
 
-            <p class="hero-subtext" data-aos="fade-up" data-aos-delay="200">
-             Latihan coba bikin 3D dengan bantuan liat tutorial youtube dan 3D model dari Spline.
-            </p>
 
-            <div class="cta-group" data-aos="fade-up" data-aos-delay="300">
-                <a href="https://youtu.be/oskiEydAaok?si=Q5-wG5rryXXS4puF" class="btn-primary">Tutorial Pembuatan 3D</a>
-                <a href="https://app.spline.design/community" class="btn-outline">Model 3D</a>
-            </div>
-        </div>
+<!-- NAVBAR -->
+<header class="navbar">
 
-        <div class="hero-visual" data-aos="zoom-in" data-aos-duration="1500" style="width: 100%; height: 500px;">
-             <iframe src='https://my.spline.design/robotfollowcursorforlandingpagemc-q4XPXipSnbSH6QbF2QcseyaA/' frameborder='0' width='100%' height='100%'></iframe>
-        </div>
-    </main> 
-    <section id="skills" class="skills-section">
-        <h2 class="section-title" data-aos="fade-up">Soft <span class="text-purple">Skills</span></h2>
-        
-        <div class="skills-container">
-           
-            <div class="skill-card" data-aos="flip-left" data-aos-delay="200">
-                <h3>Teamwork</h3>
-                <p>Bisa bekerja sama dalam tim dan berkolaborasi menggunakan Git.</p>
-            </div>
+<a href="#" class="brand-logo" data-aos="fade-down">
+Shinichi
+</a>
 
-            <div class="skill-card" data-aos="flip-left" data-aos-delay="300">
-                <h3>Problem Solving</h3>
-                <p>Suka mencari solusi logis untuk memecahkan bug atau error kode.</p>
-            </div>
+<nav class="nav-links" data-aos="fade-down" data-aos-delay="200">
 
-            <div class="skill-card" data-aos="flip-left" data-aos-delay="400">
-                <h3>Adaptability</h3>
-                <p>Cepat beradaptasi kalo lagi niat .</p>
-            </div>
-        </div>
-    
+<a href="#">Home</a>
+<a href="#skills">Soft Skills</a>
+<a href="#tech-stack">Tools</a>
 
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.27/build/spline-viewer.js"></script>
-    
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ once: true });
-    </script>
+<a href="https://github.com/fazril299" target="_blank">
+<i class="fa-brands fa-github"></i> Github
+</a>
+
+</nav>
+
+<a href="#" class="btn-primary" data-aos="fade-down" data-aos-delay="400">
+Tentang Saya
+</a>
+
+</header>
+
+
+<!-- HERO -->
+<main class="hero-section">
+
+<div class="hero-text-wrapper">
+
+<div class="badge" data-aos="fade-up">
+Latihan Website 3D
+</div>
+
+<h1 class="hero-heading" data-aos="fade-up" data-aos-delay="100">
+
+Welcome to <br>
+<span class="highlight">Zreal</span>
+
+</h1>
+
+<p class="hero-subtext" data-aos="fade-up" data-aos-delay="200">
+
+Mencoba membuat website sederhana menggunakan
+model 3D dari Spline.
+
+</p>
+
+<div class="hero-button" data-aos="fade-up" data-aos-delay="300">
+
+<a href="https://youtu.be/oskiEydAaok" target="_blank" class="btn-primary">
+Tutorial 3D
+</a>
+
+<a href="https://app.spline.design/community" target="_blank" class="btn-outline">
+Model 3D
+</a>
+
+</div>
+
+</div>
+
+</main>
+
+
+<!-- SOFT SKILLS -->
+<section id="skills" class="skills-section">
+
+<h2 class="section-title" data-aos="fade-up">
+Soft <span class="text-purple">Skills</span>
+</h2>
+
+<div class="skills-container">
+
+
+<div class="skill-card" data-aos="flip-left">
+
+<div class="icon-box">
+<i class="fa-solid fa-users teamwork-icon"></i>
+</div>
+
+<h3>Teamwork</h3>
+
+<p>
+Bisa bekerja sama dalam tim menggunakan Git.
+</p>
+
+</div>
+
+
+<div class="skill-card" data-aos="flip-left" data-aos-delay="200">
+
+<div class="icon-box">
+<i class="fa-solid fa-brain brain-icon"></i>
+</div>
+
+<h3>Problem Solving</h3>
+
+<p>
+Suka mencari solusi logis untuk bug atau error.
+</p>
+
+</div>
+
+
+<div class="skill-card" data-aos="flip-left" data-aos-delay="400">
+
+<div class="icon-box">
+<i class="fa-solid fa-bolt adapt-icon"></i>
+</div>
+
+<h3>Adaptability</h3>
+
+<p>
+Cepat belajar teknologi baru.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- TECH STACK -->
+<section id="tech-stack" class="tech-section">
+
+<h2 class="section-title" data-aos="fade-up">
+My <span class="text-purple">Tools</span>
+</h2>
+
+<div class="tech-container">
+
+<div class="tech-card" data-aos="zoom-in">
+<i class="fa-brands fa-html5 html-icon"></i>
+<p>HTML</p>
+</div>
+
+<div class="tech-card" data-aos="zoom-in" data-aos-delay="100">
+<i class="fa-brands fa-css3-alt css-icon"></i>
+<p>CSS</p>
+</div>
+
+<div class="tech-card" data-aos="zoom-in" data-aos-delay="200">
+<i class="fa-brands fa-js js-icon"></i>
+<p>JavaScript</p>
+</div>
+
+<div class="tech-card" data-aos="zoom-in" data-aos-delay="300">
+<i class="fa-brands fa-git-alt git-icon"></i>
+<p>Git</p>
+</div>
+
+<div class="tech-card" data-aos="zoom-in" data-aos-delay="400">
+<i class="fa-brands fa-github github-icon"></i>
+<p>Github</p>
+</div>
+
+<div class="tech-card" data-aos="zoom-in" data-aos-delay="500">
+<i class="fa-brands fa-python python-icon"></i>
+<p>Python</p>
+</div>
+
+<div class="tech-card" data-aos="zoom-in" data-aos-delay="600">
+<i class="fa-brands fa-react react-icon"></i>
+<p>React</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CURSOR GLOW -->
+<div id="cursor-glow"></div>
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+const intro = document.getElementById("intro-screen");
+const startBtn = document.getElementById("start-btn");
+
+startBtn.addEventListener("click",()=>{
+intro.classList.add("slide-up");
+});
+
+AOS.init({
+once:true,
+duration:800,
+offset:100
+});
+
+const glow = document.getElementById("cursor-glow");
+
+document.addEventListener("mousemove",(e)=>{
+glow.style.left = e.clientX + "px";
+glow.style.top = e.clientY + "px";
+});
+
+});
+
+</script>
+
 
 </body>
 </html>
+```
