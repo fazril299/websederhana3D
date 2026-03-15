@@ -16,8 +16,6 @@
     --radius:14px;
     --radius-big:24px;
 
-    --shadow-soft:0 10px 30px rgba(0,0,0,0.15);
-    --shadow-glow:0 0 20px rgba(168,85,247,0.3);
 
     --transition:all .35s cubic-bezier(.4,0,.2,1);
 }
@@ -33,7 +31,7 @@ box-sizing:border-box;
 }
 
 body{
-font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+font-family:"apple-system",sans-serif;
 background:var(--bg-main);
 color:var(--text-main);
 overflow-x:hidden;
@@ -338,7 +336,6 @@ border-radius:var(--radius-big);
 
 border:1px solid rgba(0,0,0,.05);
 
-backdrop-filter:blur(14px);
 
 box-shadow:var(--shadow-soft);
 
@@ -366,34 +363,6 @@ gap:30px;
 margin-top:50px;
 }
 
-.tech-card{
-
-width:120px;
-height:140px;
-
-background:rgba(255,255,255,.6);
-
-border:1px solid rgba(0,0,0,.08);
-border-radius:20px;
-
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-
-transition:.4s;
-}
-
-.tech-card:hover{
-transform:translateY(-10px);
-}
-
-.tech-card i{
-font-size:3rem;
-margin-bottom:10px;
-}
 
 
 /* =========================================
@@ -426,4 +395,54 @@ height:350px;
 margin-top:20px;
 }
 
+}
+.tools{
+overflow:hidden;
+padding:40px 0;
+}
+
+
+.tools-track{
+display:flex;
+gap:30px;
+width:max-content;
+
+animation:scroll 30s linear infinite;
+}
+
+.tool{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+
+width:120px;
+height:120px;
+
+background:white;
+border-radius:15px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+font-weight:bold;
+}
+
+.tool:nth-child(1) i{color:#e34c26;} /* HTML */
+.tool:nth-child(2) i{color:#264de4;} /* CSS */
+.tool:nth-child(3) i{color:#f7df1e;} /* JS */
+.tool:nth-child(4) i{color:#61dafb;} /* React */
+.tool:nth-child(5) i{color:#f1502f;} /* Git */
+
+@keyframes scroll{
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+}
+.tool:hover{
+transform:translateY(-10px);
+transition:0.3s;
 }
