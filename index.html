@@ -1,284 +1,549 @@
-```html
 <!DOCTYPE html>
-<html lang="id">
-
+<html lang="id" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Shinichi | 3D Experience</title>
-
-<meta name="description" content="Portfolio sederhana dengan elemen 3D">
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+<title>Shinichi | Portfolio</title>
+<meta name="description" content="Portfolio Shinichi - Web Developer">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-<!-- SPLINE VIEWER -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.69/build/spline-viewer.js"></script>
-<spline-viewer url="https://prod.spline.design/AUtAmQFcHdOxpjJt/scene.splinecode"></spline-viewer>
 </head>
-
-
 <body>
 
+<!-- SCROLL PROGRESS -->
+<div class="scroll-line" id="scrollLine"></div>
 
-<!-- INTRO SCREEN -->
+<!-- SPLINE BG -->
+<spline-viewer url="https://prod.spline.design/AUtAmQFcHdOxpjJt/scene.splinecode"></spline-viewer>
+
+<!-- =================== INTRO =================== -->
 <div id="intro-screen">
-
-<h1 class="intro-text">
-Welcome to my Portfolio
-</h1>
-
-<button id="start-btn">
-<span>Mulai Jelajahi</span>
-<i class="fa-solid fa-rocket"></i>
-</button>
-
+  <div class="intro-logo">
+    <!-- MetaMask-style Fox SVG -->
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="50,5 95,25 95,75 50,95 5,75 5,25" fill="#F6851B" fill-opacity="0.15" stroke="#F6851B" stroke-width="1.5"/>
+      <polygon points="50,18 80,30 80,70 50,82 20,70 20,30" fill="#F6851B" fill-opacity="0.25" stroke="#F6851B" stroke-width="1"/>
+      <text x="50" y="60" text-anchor="middle" font-family="Space Mono" font-size="28" font-weight="700" fill="#F6851B">S</text>
+    </svg>
+  </div>
+  <div class="intro-progress"><div class="intro-progress-bar"></div></div>
+  <p class="intro-text">Initializing <span>Portfolio.exe</span></p>
+  <button id="start-btn">Launch →</button>
 </div>
 
+<!-- =================== NAVBAR =================== -->
+<header class="navbar" data-aos="fade-down" data-aos-duration="600">
+  <a href="#" class="brand-logo">
+    <svg class="brand-fox" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="16,2 30,8 30,24 16,30 2,24 2,8" fill="#F6851B" fill-opacity="0.2" stroke="#F6851B" stroke-width="1.2"/>
+      <text x="16" y="21" text-anchor="middle" font-family="Space Mono" font-size="11" font-weight="700" fill="#F6851B">Sz</text>
+    </svg>
+    Shinichi<span>.dev</span>
+  </a>
 
-<!-- NAVBAR -->
-<header class="navbar">
+  <nav class="nav-center">
+    <a href="#hero" class="active">Home</a>
+    <a href="#certs">Sertifikat</a>
+    <a href="#education">Pendidikan</a>
+    <a href="#tools">Tools</a>
+    <a href="#contact">Kontak</a>
+  </nav>
 
-<a href="#" class="brand-logo" data-aos="fade-down">
-Shinichi
-</a>
-
-<nav class="nav-links" data-aos="fade-down" data-aos-delay="200">
-
-<a href="#">Home</a>
-<a href="#skills">Soft Skills</a>
-<a href="#tech-stack">Tools</a>
-
-<a href="https://github.com/fazril299" target="_blank">
-<i class="fa-brands fa-github"></i> Github
-</a>
-
-</nav>
-
-<a href="#" class="btn-primary" data-aos="fade-down" data-aos-delay="400">
-Tentang Saya
-</a>
-
+  <div class="nav-right">
+    <a href="https://github.com/fazril299" target="_blank" class="nav-icon-btn">
+      <i class="fa-brands fa-github"></i>
+    </a>
+    <button id="darkToggle" class="nav-icon-btn" title="Toggle theme">
+      <i class="fa-solid fa-circle-half-stroke"></i>
+    </button>
+    <a href="#" class="btn-nav-cta">
+      <i class="fa-solid fa-wallet"></i> Connect
+    </a>
+  </div>
 </header>
 
+<!-- =================== HERO =================== -->
+<main class="hero-section" id="hero">
+  <div class="hero-inner">
 
-<!-- HERO -->
-<main class="hero-section">
-
-<div class="hero-text-wrapper">
-
-<div class="badge" data-aos="fade-up">
-Latihan Website 3D
-</div>
-
-<h1 class="hero-heading" data-aos="fade-up" data-aos-delay="100">
-
-Welcome to <br>
-<span class="highlight">Zreal</span>
-
-</h1>
-
-<p class="hero-subtext" data-aos="fade-up" data-aos-delay="200">
-
-Mencoba membuat website sederhana menggunakan
-model 3D dari Spline.
-
-</p>
-
-<div class="hero-button" data-aos="fade-up" data-aos-delay="300">
-
-<a href="https://youtu.be/oskiEydAaok" target="_blank" class="btn-primary">
-Dicoding
-</a>
-
-<a href="https://app.spline.design/community" target="_blank" class="btn-outline">
-Model 3D
-</a>
-
-</div>
-
-</div>
-
-</main>
-
-
-<!-- SOFT SKILLS -->
-<section id="skills" class="skills-section">
-
-<h2 class="section-title" data-aos="fade-up">
-Soft <span class="text-purple">Skills</span>
-</h2>
-
-<div class="skills-container">
-
-
-<div class="skill-card" data-aos="flip-left">
-
-<div class="icon-box">
-<i class="fa-solid fa-users teamwork-icon"></i>
-</div>
-
-<h3>Teamwork</h3>
-
-<p>
-Bisa bekerja sama dalam tim menggunakan Git.
-</p>
-
-</div>
-
-
-<div class="skill-card" data-aos="flip-left" data-aos-delay="200">
-
-<div class="icon-box">
-<i class="fa-solid fa-brain brain-icon"></i>
-</div>
-
-<h3>Problem Solving</h3>
-
-<p>
-Suka mencari solusi logis untuk bug atau error.
-</p>
-
-</div>
-
-
-<div class="skill-card" data-aos="flip-left" data-aos-delay="400">
-
-<div class="icon-box">
-<i class="fa-solid fa-bolt adapt-icon"></i>
-</div>
-
-<h3>Adaptability</h3>
-
-<p>
-Cepat belajar teknologi baru.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- TECH STACK -->
-<section id="tech-stack" class="tech-section">
-
-<h2 class="section-title" data-aos="fade-up">
-My <span class="text-purple">Tools</span>
-</h2>
-
-<div class="tech-container">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<div class="tools">
-
-  <div class="tools-track">
-
-    <div class="tool">
-      <i class="fa-brands fa-html5"></i>
-      HTML
+    <div class="hero-badge" data-aos="fade-up">
+      <span class="badge-dot"></span>
+      Open to opportunities
     </div>
 
-    <div class="tool">
-      <i class="fa-brands fa-css3-alt"></i>
-      CSS
+    <h1 class="hero-heading" data-aos="fade-up" data-aos-delay="80">
+      Building the<br><span class="word-accent">Web3</span> Web
+    </h1>
+
+    <p class="hero-sub-heading" data-aos="fade-up" data-aos-delay="150">
+      Shinichi &mdash; Front-End Dev
+    </p>
+
+    <p class="hero-subtext" data-aos="fade-up" data-aos-delay="220">
+      Mahasiswa yang sedang membangun portfolio digital dengan pendekatan modern — eksplorasi 3D, desain interaktif, dan teknologi web terkini untuk menciptakan pengalaman yang berkesan.
+    </p>
+
+    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+      <a href="https://www.dicoding.com/users/kevinsebastian/academies" target="_blank" class="btn-primary">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> Lihat Dicoding
+      </a>
+      <a href="https://app.spline.design/community" target="_blank" class="btn-ghost">
+        About Me <i class="fa-solid fa-arrow-right"></i>
+      </a>
     </div>
 
-    <div class="tool">
-      <i class="fa-brands fa-js"></i>
-      JavaScript
-    </div>
-
-    <div class="tool">
-      <i class="fa-brands fa-react"></i>
-      React
-    </div>
-
-    <div class="tool">
-      <i class="fa-brands fa-git-alt"></i>
-      Git
-    </div>
-
-    <!-- duplikat supaya looping -->
-
-    <div class="tool">
-      <i class="fa-brands fa-html5"></i>
-      HTML
-    </div>
-
-    <div class="tool">
-      <i class="fa-brands fa-css3-alt"></i>
-      CSS
-    </div>
-
-    <div class="tool">
-      <i class="fa-brands fa-js"></i>
-      JavaScript
-    </div>
-
-    <div class="tool">
-      <i class="fa-brands fa-react"></i>
-      React
-    </div>
-
-    <div class="tool">
-      <i class="fa-brands fa-git-alt"></i>
-      Git
+    <div class="hero-stats" data-aos="fade-up" data-aos-delay="380">
+      <div class="stat-item">
+        <div class="stat-num">3+</div>
+        <div class="stat-label">Sertifikat</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">6</div>
+        <div class="stat-label">Tech Stack</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">01</div>
+        <div class="stat-label">Portfolio</div>
+      </div>
     </div>
 
   </div>
+</main>
 
-</div>
+<!-- =================== CERTIFICATES =================== -->
+<section class="certs-section" id="certs">
+  <div class="section-header">
+    <span class="section-eyebrow" data-aos="fade-up">// On-chain credentials</span>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">
+      Sertifikat <span>Saya</span>
+    </h2>
+  </div>
 
+  <div class="certs-grid">
+
+    <div class="cert-card" data-aos="fade-up" data-aos-delay="0">
+      <div class="cert-img-wrap">
+        <img src="dicoding2.png" alt="Sertifikat Manajemen Proyek" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="cert-img-placeholder" style="display:none"><i class="fa-solid fa-diagram-project"></i></div>
+      </div>
+      <div class="cert-body">
+        <span class="cert-tag"><i class="fa-solid fa-circle-dot"></i> Dicoding Indonesia</span>
+        <h3 class="cert-title">Manajemen Proyek Digital</h3>
+        <p class="cert-issuer">Fundamental project management skills for digital products</p>
+        <div class="cert-footer">
+          <span class="cert-verify"><i class="fa-solid fa-shield-check"></i> Verified</span>
+          <span class="cert-year">2024</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="cert-img-wrap">
+        <img src="dicoding1.png" alt="Sertifikat Web Sederhana" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="cert-img-placeholder" style="display:none"><i class="fa-solid fa-code"></i></div>
+      </div>
+      <div class="cert-body">
+        <span class="cert-tag"><i class="fa-solid fa-circle-dot"></i> Dicoding Indonesia</span>
+        <h3 class="cert-title">Belajar Membuat Web Sederhana</h3>
+        <p class="cert-issuer">HTML, CSS, and basic JavaScript for web development</p>
+        <div class="cert-footer">
+          <span class="cert-verify"><i class="fa-solid fa-shield-check"></i> Verified</span>
+          <span class="cert-year">2024</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="cert-img-wrap">
+        <img src="ads.png" alt="Sertifikat AI" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="cert-img-placeholder" style="display:none"><i class="fa-solid fa-robot"></i></div>
+      </div>
+      <div class="cert-body">
+        <span class="cert-tag"><i class="fa-solid fa-circle-dot"></i> Dicoding Indonesia</span>
+        <h3 class="cert-title">Pengenalan AI Sederhana</h3>
+        <p class="cert-issuer">Fundamentals of artificial intelligence and machine learning</p>
+        <div class="cert-footer">
+          <span class="cert-verify"><i class="fa-solid fa-shield-check"></i> Verified</span>
+          <span class="cert-year">2024</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
+<!-- =================== EDUCATION =================== -->
+<div class="section-divider"><div class="section-divider-line"></div></div>
+<section class="edu-section" id="education">
+  <div class="section-header">
+    <span class="section-eyebrow" data-aos="fade-up">// Academic records</span>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">
+      Latar <span>Pendidikan</span>
+    </h2>
+  </div>
 
+  <div class="edu-grid">
 
+    <div class="edu-card" data-aos="fade-up" data-aos-delay="0">
+      <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+      <div class="edu-content">
+        <h3 class="edu-school">SMK Wikrama Bogor</h3>
+        <p class="edu-major">Rekayasa Perangkat Lunak</p>
+        <div class="edu-meta">
+          <span class="edu-year-badge"><i class="fa-solid fa-calendar"></i> 2025 – 2027</span>
+          <span class="edu-status active"><i class="fa-solid fa-circle" style="font-size:0.5rem"></i> Aktif</span>
+        </div>
+        <div class="edu-img-container">
+          <img src="wikrama.png" alt="SMK Wikrama" onerror="this.style.opacity='0'">
+        </div>
+      </div>
+    </div>
 
+    <div class="edu-card" data-aos="fade-up" data-aos-delay="120">
+      <div class="edu-icon"><i class="fa-solid fa-building-columns"></i></div>
+      <div class="edu-content">
+        <h3 class="edu-school">Binus University</h3>
+        <p class="edu-major">Computer Science</p>
+        <div class="edu-meta">
+          <span class="edu-year-badge"><i class="fa-solid fa-calendar"></i> OTW</span>
+          <span class="edu-status upcoming"><i class="fa-solid fa-clock" style="font-size:0.6rem"></i> Upcoming</span>
+        </div>
+        <div class="edu-img-container">
+          <img src="binus.jpg" alt="Binus University" onerror="this.style.opacity='0'">
+        </div>
+      </div>
+    </div>
 
+  </div>
+</section>
 
+<!-- =================== SOFT SKILLS =================== -->
+<div class="section-divider"><div class="section-divider-line"></div></div>
+<section class="skills-section" id="skills">
+  <div class="section-header">
+    <span class="section-eyebrow" data-aos="fade-up">// Core abilities</span>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">
+      Soft <span>Skills</span>
+    </h2>
+  </div>
 
+  <div class="skills-grid">
+
+    <div class="skill-item" data-aos="fade-up" data-aos-delay="0">
+      <div class="skill-item-icon"><i class="fa-solid fa-users"></i></div>
+      <h3 class="skill-item-title">Team Collaboration</h3>
+      <p class="skill-item-desc">Mampu bekerja dalam tim lintas divisi dengan komunikasi yang efektif dan terstruktur.</p>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="85"></div></div>
+    </div>
+
+    <div class="skill-item" data-aos="fade-up" data-aos-delay="80">
+      <div class="skill-item-icon"><i class="fa-solid fa-brain"></i></div>
+      <h3 class="skill-item-title">Problem Solving</h3>
+      <p class="skill-item-desc">Terbiasa menganalisis masalah teknis dan mencari solusi kreatif yang efisien.</p>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="78"></div></div>
+    </div>
+
+    <div class="skill-item" data-aos="fade-up" data-aos-delay="160">
+      <div class="skill-item-icon"><i class="fa-solid fa-bolt"></i></div>
+      <h3 class="skill-item-title">Fast Learner</h3>
+      <p class="skill-item-desc">Cepat beradaptasi dengan teknologi baru dan ekosistem yang terus berkembang.</p>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="90"></div></div>
+    </div>
+
+    <div class="skill-item" data-aos="fade-up" data-aos-delay="240">
+      <div class="skill-item-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+      <h3 class="skill-item-title">Creative Thinking</h3>
+      <p class="skill-item-desc">Pendekatan desain yang unik — menggabungkan estetika dan fungsionalitas.</p>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="82"></div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =================== TOOLS =================== -->
+<div class="section-divider"><div class="section-divider-line"></div></div>
+<section class="tools-section" id="tools">
+  <div class="section-header">
+    <span class="section-eyebrow" data-aos="fade-up">// Tech stack</span>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">
+      My <span>Tools</span>
+    </h2>
+  </div>
+
+  <div class="tools-track-wrap">
+    <div class="tools-fade-l"></div>
+    <div class="tools-fade-r"></div>
+    <div class="tools-track">
+      <div class="tool-pill"><i class="fa-brands fa-html5 t-html"></i> HTML5</div>
+      <div class="tool-pill"><i class="fa-brands fa-css3-alt t-css"></i> CSS3</div>
+      <div class="tool-pill"><i class="fa-brands fa-js t-js"></i> JavaScript</div>
+      <div class="tool-pill"><i class="fa-brands fa-react t-react"></i> React</div>
+      <div class="tool-pill"><i class="fa-brands fa-git-alt t-git"></i> Git</div>
+      <div class="tool-pill"><i class="fa-brands fa-python t-python"></i> Python</div>
+      <div class="tool-pill"><i class="fa-brands fa-figma t-figma"></i> Figma</div>
+      <div class="tool-pill"><i class="fa-brands fa-node-js t-node"></i> Node.js</div>
+      <!-- Duplicate for infinite scroll -->
+      <div class="tool-pill"><i class="fa-brands fa-html5 t-html"></i> HTML5</div>
+      <div class="tool-pill"><i class="fa-brands fa-css3-alt t-css"></i> CSS3</div>
+      <div class="tool-pill"><i class="fa-brands fa-js t-js"></i> JavaScript</div>
+      <div class="tool-pill"><i class="fa-brands fa-react t-react"></i> React</div>
+      <div class="tool-pill"><i class="fa-brands fa-git-alt t-git"></i> Git</div>
+      <div class="tool-pill"><i class="fa-brands fa-python t-python"></i> Python</div>
+      <div class="tool-pill"><i class="fa-brands fa-figma t-figma"></i> Figma</div>
+      <div class="tool-pill"><i class="fa-brands fa-node-js t-node"></i> Node.js</div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== CONTACT =================== -->
+<div class="section-divider"><div class="section-divider-line"></div></div>
+<section class="contact-section" id="contact">
+  <div class="section-header">
+    <span class="section-eyebrow" data-aos="fade-up">// Get in touch</span>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">
+      Hubungi <span>Saya</span>
+    </h2>
+  </div>
+
+  <div class="contact-wrapper">
+
+    <!-- LEFT: contact info -->
+    <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
+      <div class="contact-info-head">
+        <h3>Let's build something together.</h3>
+        <p>Terbuka untuk kolaborasi, diskusi proyek, atau sekadar ngobrol soal tech & desain. Jangan ragu untuk menghubungi saya melalui salah satu channel di bawah.</p>
+      </div>
+
+      <a href="mailto:shinichi@email.com" class="contact-method">
+        <div class="contact-method-icon orange"><i class="fa-solid fa-envelope"></i></div>
+        <div class="contact-method-text">
+          <div class="contact-method-label">Email</div>
+          <div class="contact-method-value">shinichi@email.com</div>
+        </div>
+        <i class="fa-solid fa-arrow-right contact-method-arrow"></i>
+      </a>
+
+      <a href="https://github.com/fazril299" target="_blank" class="contact-method">
+        <div class="contact-method-icon purple"><i class="fa-brands fa-github"></i></div>
+        <div class="contact-method-text">
+          <div class="contact-method-label">GitHub</div>
+          <div class="contact-method-value">github.com/fazril299</div>
+        </div>
+        <i class="fa-solid fa-arrow-right contact-method-arrow"></i>
+      </a>
+
+      <a href="https://linkedin.com" target="_blank" class="contact-method">
+        <div class="contact-method-icon blue"><i class="fa-brands fa-linkedin"></i></div>
+        <div class="contact-method-text">
+          <div class="contact-method-label">LinkedIn</div>
+          <div class="contact-method-value">linkedin.com/in/shinichi</div>
+        </div>
+        <i class="fa-solid fa-arrow-right contact-method-arrow"></i>
+      </a>
+
+      <a href="https://wa.me/6281234567890" target="_blank" class="contact-method">
+        <div class="contact-method-icon green"><i class="fa-brands fa-whatsapp"></i></div>
+        <div class="contact-method-text">
+          <div class="contact-method-label">WhatsApp</div>
+          <div class="contact-method-value">+62 812-3456-7890</div>
+        </div>
+        <i class="fa-solid fa-arrow-right contact-method-arrow"></i>
+      </a>
+    </div>
+
+    <!-- RIGHT: form -->
+    <div class="contact-form-wrap" data-aos="fade-left" data-aos-delay="150">
+      <div id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Nama</label>
+            <input type="text" class="form-input" placeholder="John Doe" id="fname">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-input" placeholder="john@email.com" id="femail">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Subjek</label>
+          <input type="text" class="form-input" placeholder="Kolaborasi proyek / pertanyaan..." id="fsubject">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Pesan</label>
+          <textarea class="form-textarea" placeholder="Halo Shinichi, saya ingin..." id="fmessage"></textarea>
+        </div>
+        <button class="form-submit" id="submitBtn" onclick="handleFormSubmit()">
+          <i class="fa-solid fa-paper-plane"></i> Kirim Pesan
+        </button>
+        <p class="form-note">Biasanya membalas dalam 24 jam &nbsp;⚡</p>
+      </div>
+
+      <!-- success state -->
+      <div class="form-success" id="formSuccess">
+        <div class="form-success-icon"><i class="fa-solid fa-check"></i></div>
+        <h4>Pesan Terkirim!</h4>
+        <p>Terima kasih sudah menghubungi saya.<br>Saya akan segera membalas pesanmu.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =================== FOOTER =================== -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-brand-name">Shinichi<span>.dev</span></div>
+      <div class="footer-brand-tagline">Front-End Developer · Surabaya, Indonesia</div>
+    </div>
+
+    <nav class="footer-nav">
+      <a href="#hero">Home</a>
+      <a href="#certs">Sertifikat</a>
+      <a href="#education">Pendidikan</a>
+      <a href="#skills">Skills</a>
+      <a href="#tools">Tools</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+
+    <div class="footer-socials">
+      <a href="https://github.com/fazril299" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://wa.me/6281234567890" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-copy">
+      © 2025 <span>gabrial</span>.dev — Crafted with passion &amp; caffeine ☕
+    </div>
+    <div class="footer-status">
+      <span class="footer-status-dot"></span>
+      Available for opportunities
+    </div>
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
 <script>
+document.addEventListener("DOMContentLoaded", () => {
 
-document.addEventListener("DOMContentLoaded",()=>{
+  // AOS
+  AOS.init({ once: true, duration: 700, offset: 80 });
 
-const intro = document.getElementById("intro-screen");
-const startBtn = document.getElementById("start-btn");
+  // INTRO
+  const intro = document.getElementById("intro-screen");
+  document.getElementById("start-btn").addEventListener("click", () => {
+    intro.classList.add("slide-up");
+    setTimeout(() => intro.style.display = "none", 900);
+  });
 
-startBtn.addEventListener("click",()=>{
-intro.classList.add("slide-up");
+  // DARK TOGGLE
+  const toggle = document.getElementById("darkToggle");
+  toggle.addEventListener("click", () => {
+    const html = document.documentElement;
+    const current = html.getAttribute("data-theme");
+    html.setAttribute("data-theme", current === "dark" ? "light" : "dark");
+  });
+
+  // SCROLL PROGRESS
+  const scrollLine = document.getElementById("scrollLine");
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = (scrollTop / docHeight) * 100;
+    scrollLine.style.width = pct + "%";
+  });
+
+  // NAV ACTIVE
+  const sections = document.querySelectorAll("section[id], main[id]");
+  const navLinks = document.querySelectorAll(".nav-center a");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove("active"));
+        const active = document.querySelector(`.nav-center a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add("active");
+      }
+    });
+  }, { threshold: 0.4 });
+  sections.forEach(s => observer.observe(s));
+
+  // SKILL BARS (animate on scroll)
+  const skillBars = document.querySelectorAll(".skill-bar");
+  const barObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const bar = entry.target;
+        bar.style.width = bar.dataset.width + "%";
+        barObserver.unobserve(bar);
+      }
+    });
+  }, { threshold: 0.5 });
+  skillBars.forEach(bar => barObserver.observe(bar));
+
+  // TOOL TILT 3D
+  document.querySelectorAll(".tool-pill").forEach(tool => {
+    tool.addEventListener("mousemove", (e) => {
+      const rect = tool.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const cx = rect.width / 2;
+      const cy = rect.height / 2;
+      const rx = (cy - y) / 10;
+      const ry = (x - cx) / 10;
+      tool.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg) translateY(-2px)`;
+    });
+    tool.addEventListener("mouseleave", () => {
+      tool.style.transform = "";
+    });
+  });
+
+  // NAVBAR SCROLL STYLE
+  const navbar = document.querySelector(".navbar");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 60) {
+      navbar.style.padding = "12px 6%";
+    } else {
+      navbar.style.padding = "18px 6%";
+    }
+  });
+
 });
 
-AOS.init({
-once:true,
-duration:800,
-offset:100
-});
+// CONTACT FORM HANDLER
+function handleFormSubmit() {
+  const name = document.getElementById("fname").value.trim();
+  const email = document.getElementById("femail").value.trim();
+  const subject = document.getElementById("fsubject").value.trim();
+  const message = document.getElementById("fmessage").value.trim();
 
-const glow = document.getElementById("cursor-glow");
+  if (!name || !email || !message) {
+    const inputs = document.querySelectorAll(".form-input, .form-textarea");
+    inputs.forEach(inp => {
+      if (!inp.value.trim()) {
+        inp.style.borderColor = "#E8513C";
+        inp.addEventListener("input", () => inp.style.borderColor = "", { once: true });
+      }
+    });
+    return;
+  }
 
-document.addEventListener("mousemove",(e)=>{
-glow.style.left = e.clientX + "px";
-glow.style.top = e.clientY + "px";
-});
+  const btn = document.getElementById("submitBtn");
+  btn.classList.add("sending");
+  btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Mengirim...';
 
-});
-
+  setTimeout(() => {
+    document.getElementById("contactForm").style.display = "none";
+    const success = document.getElementById("formSuccess");
+    success.style.display = "flex";
+  }, 1800);
+}
 </script>
-
 
 </body>
 </html>
-```
